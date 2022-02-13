@@ -1,15 +1,21 @@
-import { ADD_TODO, DELETE_TODO, UPDATE_TODO } from "./constants";
+import { ADD_TODO, DELETE_TODO, GET_API_TODO, UPDATE_TODO } from "./constants";
 
 const initialState = {
   todos: [],
 };
 export const TodoReducers = (state = initialState, { type, payload }) => {
   switch (type) {
-    //   create todos
+    //   get API todos
+    case GET_API_TODO:
+      return {
+        ...state,
+        todos: payload,
+      };
+    // added API todos
     case ADD_TODO:
       return {
         ...state,
-        todos: { ...state.todos, payload },
+        todos: { ...state, payload },
       };
     //   update todos
     case UPDATE_TODO:
