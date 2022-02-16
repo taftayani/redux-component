@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import ButtonComponent from "../../componentElement/elements/button";
+import ButtonComponent from "../../../componentElement/elements/button";
 const ListTodo = ({ todo }) => {
   return (
     <>
