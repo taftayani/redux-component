@@ -15,7 +15,7 @@ export const TodoReducers = (state = initialState, { type, payload }) => {
     case ADD_TODO:
       return {
         ...state,
-        todos: { ...state, payload },
+        todos: state.todos.concat(payload),
       };
     //   update todos
     case UPDATE_TODO:

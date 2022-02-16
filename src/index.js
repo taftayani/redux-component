@@ -7,7 +7,8 @@ import { PersistGate } from "redux-persist/integration/react";
 import { persistor, store } from "./redux/store";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-
+import axios from "axios";
+axios.defaults.baseURL = process.env.REACT_APP_URL_API;
 ReactDOM.render(
   <PersistGate persistor={persistor}>
     <Provider store={store}>

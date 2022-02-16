@@ -17,7 +17,7 @@ const ListTodo = ({ todo }) => {
                   <label className={"description-list"}>{list.createdAt}</label>
                 </div>
                 <ButtonComponent
-                  //   onClick={() => showingModal(todo)}
+                  // onClick={() => showingModal(todo)}
                   classButton={"detail-btn"}
                 >
                   Detail

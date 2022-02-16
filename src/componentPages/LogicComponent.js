@@ -1,6 +1,7 @@
 // filter expression
+
 export const FilterDone = (todos) => {
-  return todos
+  return todos !== ""
     ? todos.todos
         .filter((list) => {
           return list.status === 1;
@@ -13,7 +14,7 @@ export const FilterDone = (todos) => {
     : "";
 };
 export const FilterUndone = (todos) => {
-  return todos
+  return todos !== ""
     ? todos.todos
         .filter((list) => {
           return list.status === 0;
@@ -25,8 +26,8 @@ export const FilterUndone = (todos) => {
         })
     : "";
 };
-// crud whole apps
 // filter expression UI
 export const BtnClick = (btn) => {
   return btn === true ? "button-tab-active" : "button-tab";
 };
+// button tab, if there are some page have a button tab
