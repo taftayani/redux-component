@@ -91,6 +91,11 @@ code {
   cursor: pointer;
   border:none
 }
+.link-profile{
+  color: #87BB2C;
+  margin-top: 30px;
+  margin-left: 50px;
+}
   /* button css  */
   /* Header, and text landing page  */
 .Header-page{
