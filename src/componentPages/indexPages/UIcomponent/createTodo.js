@@ -1,7 +1,6 @@
 import moment from "moment";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { addTodoList } from "../../../redux/Todo/actions";
 const CreateTodo = () => {
@@ -54,11 +53,9 @@ const CreateTodo = () => {
               className={"type-input-textarea"}
             />
           </div>
-          <Link to={"/"}>
-            <button type="submit" className="button-tab-active">
-              Save
-            </button>
-          </Link>
+          <button type="submit" className="button-tab-active">
+            Save
+          </button>
         </div>
       </form>
     </>

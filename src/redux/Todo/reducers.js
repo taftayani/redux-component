@@ -1,3 +1,4 @@
+import moment from "moment";
 import { ADD_TODO, DELETE_TODO, GET_API_TODO, UPDATE_TODO } from "./constants";
 
 const initialState = {
@@ -19,7 +20,20 @@ export const TodoReducers = (state = initialState, { type, payload }) => {
       };
     //   update todos
     case UPDATE_TODO:
-      return {};
+      return {
+        ...state,
+        todos: state.todos.map((list) =>
+          list.id === payload.id
+            ? {
+                ...list,
+                title: payload.title,
+                description: payload.description,
+                status: parseInt(payload.status),
+                createdAt: moment().format("YYYY-MM-DD h:m"),
+              }
+            : list
+        ),
+      };
     //   delete todos
     case DELETE_TODO:
       return {};

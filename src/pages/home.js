@@ -6,7 +6,6 @@ import { getApiTodoList } from "../redux/Todo/actions";
 import ButtonComponent from "../componentElement/elements/button";
 import CreateTodo from "../componentPages/indexPages/UIcomponent/createTodo";
 import ListTodo from "../componentPages/indexPages/UIcomponent/listTodo";
-
 import {
   BtnClick,
   FilterDone,
@@ -23,14 +22,13 @@ const Home = () => {
   // redux implement
   const getAPI = async () => {
     const response = await axios.get("/");
-    console.log(response);
     if (todos.todos.length === 0) {
       dispatch(getApiTodoList(response.data));
     }
   };
   useEffect(() => {
     getAPI();
-    console.log("todos", todos);
+    console.log(todos);
   }, []);
   return (
     <>

@@ -1,5 +1,4 @@
 // filter expression
-
 export const FilterDone = (todos) => {
   return todos !== ""
     ? todos.todos
@@ -26,8 +25,11 @@ export const FilterUndone = (todos) => {
         })
     : "";
 };
-// filter expression UI
+// button tab, if there are some page have a button tab
 export const BtnClick = (btn) => {
   return btn === true ? "button-tab-active" : "button-tab";
 };
-// button tab, if there are some page have a button tab
+// button showing modal
+export const ShowingModal = (btn) => {
+  return btn === true ? true : false;
+};

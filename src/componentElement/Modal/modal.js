@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const ModalDetail = ({ closeModal, children }) => {
+const ModalDetail = ({ closeModal, children, showing }) => {
   useEffect(() => {
     if (closeModal === true) {
       document.body.style.overflow = "hidden";
@@ -10,7 +10,7 @@ const ModalDetail = ({ closeModal, children }) => {
   });
   return (
     <div>
-      <div className="container-modal">
+      <div className="container-modal" hidden={showing}>
         <div className="close-container" onClick={closeModal} />
         <div className="modal-wrap">{children}</div>
       </div>
